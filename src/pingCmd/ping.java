@@ -63,7 +63,7 @@ public class ping extends Thread{
         
             //execute command
 
-            Process p=Runtime.getRuntime().exec(command);
+            Process p=Runtime.getRuntime().exec(new String[]{command});
             Date date = new Date();
             Timestamp timeStamp = new Timestamp(date.getTime());
             

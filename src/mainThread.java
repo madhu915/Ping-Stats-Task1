@@ -40,7 +40,7 @@ public class mainThread{
 
         // Runtime.getRuntime().exec(new String[]{"cmd", "/k", "start", "runas","/user:administrator","regedit"});
 
-        Process p=Runtime.getRuntime().exec("net session");
+        Process p=Runtime.getRuntime().exec(new String[]{"net session"});
 
         
         BufferedReader reader=new BufferedReader(new InputStreamReader(p.getInputStream()));
