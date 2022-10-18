@@ -87,14 +87,14 @@ public class login {
 
             ResultSet ipSet=db.query.executeQuery("select status, count(*) as count from pings where hostid="+hostID+" group by status");
             Formatter format=new Formatter();
-            format.format("%s","\n---------------------------------------\n");
-            format.format("%20s %18s\n", "status","count");
-            format.format("%s","---------------------------------------\n");
+            format.format("%s","\n--------------------------------------------------------\n");
+            format.format("%20s %35s\n", "status","count");
+            format.format("%s","--------------------------------------------------------\n");
 
             while(ipSet.next()){
-                format.format("%25s %13s\n", ipSet.getString(1),ipSet.getString(2));
+                format.format("%30s %23s\n", ipSet.getString(1),ipSet.getString(2));
             }
-            format.format("%s","\n---------------------------------------\n");
+            format.format("%s","\n--------------------------------------------------------\n");
             System.out.println(format);
             format.close();
 
